@@ -15,8 +15,7 @@ class RecipeFinder {
            foreach ($fridgeFile as $line) {
                 $this->fridge[$itemNo] = array();
                 $this->fridge[$itemNo++] = str_getcsv($line);
-             }
-           print_r($this->fridge);  
+             }            
 
       }
 
