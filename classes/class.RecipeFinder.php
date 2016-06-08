@@ -10,12 +10,18 @@ class RecipeFinder {
       	$this->readRecipeList($files['recipeJSON']);
       }
       public function readFridge($fridgeCSV){
-         
+           $fridgeFile = file($fridgeCSV);
+           $itemNo = 0;
+           foreach ($fridgeFile as $line) {
+                $this->fridge[$itemNo] = array();
+                $this->fridge[$itemNo++] = str_getcsv($line);
+             }
+           print_r($this->fridge);  
 
       }
 
       public function readRecipeList($recipeJSON){
-               
+                
                  
       }
 
