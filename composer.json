@@ -1,0 +1,9 @@
+{
+	"require-dev":{
+		"phpunit/phpunit": "5.4.2"
+	},
+	"autoload": {
+		"classmap": ["classes"]
+		}
+	
+} 
