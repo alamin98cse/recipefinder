@@ -20,7 +20,10 @@ class RecipeFinder {
       }
 
       public function readRecipeList($recipeJSON){
-                
+              $recipeFile = file_get_contents($recipeJSON);
+              $this->recipe = json_decode($recipeFile); 
+
+              print_r($this->recipe);    
                  
       }
 
