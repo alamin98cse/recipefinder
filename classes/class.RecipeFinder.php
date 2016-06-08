@@ -38,7 +38,7 @@ class RecipeFinder {
              foreach($rec->ingredients as $recIng){
           
                 foreach($this->fridge as $ing){
-                    if($ing[0] == $recIng->item && $ing[1] >= $recIng->amount && $ing[2] == $recIng->unit){
+                    if($ing[0] == $recIng->item && $ing[1] >= $recIng->amount && $ing[2] == $recIng->unit && strtotime(date('d-m-Y'))<=strtotime(str_replace('/','-',$ing[3]))){
                      $today = date_create(date('d-m-Y'));
                      $useBy = date_create(str_replace('/','-',$ing[3]));
                      $closest = date_diff($today,$useBy)->d;
